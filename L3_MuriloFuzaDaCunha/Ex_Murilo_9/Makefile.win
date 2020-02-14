@@ -1,0 +1,28 @@
+# Project: Ex_Murilo_9
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Ex_Murilo_9.o
+LINKOBJ  = Ex_Murilo_9.o
+LIBS     = -L"D:/Programação/IDE/Dev-Cpp/MinGW64/lib" -L"D:/Programação/IDE/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Programação/IDE/Dev-Cpp/MinGW64/include" -I"D:/Programação/IDE/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Programação/IDE/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Programação/IDE/Dev-Cpp/MinGW64/include" -I"D:/Programação/IDE/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Programação/IDE/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Programação/IDE/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Ex_Murilo_9.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Ex_Murilo_9.o: Ex_Murilo_9.cpp
+	$(CPP) -c Ex_Murilo_9.cpp -o Ex_Murilo_9.o $(CXXFLAGS)

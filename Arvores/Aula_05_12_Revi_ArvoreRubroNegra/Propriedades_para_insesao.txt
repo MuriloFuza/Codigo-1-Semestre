@@ -1,0 +1,164 @@
+    PROPRIEDADES    
+
+-Todo nó é vermelho ou preto
+-A raiz é preta
+-Toda folha exeterna(só NIL) é preta
+-Se um nó é vermelho, então ambos seus filhos são pretos
+-Todos os caminhos a partir da raiz da árvore até suas folhas passa pelo mesmo número de nós pretos
+
+--Altura Negra:: é numero de nos negros em qualquer caminho simples de um nó, 
+sem incluir esse nó, até uma folha.
+
+
+
+                                    41P
+                                38V      
+                            31V
+                    --------------------------------------
+                                    38P 
+                                31V     41V
+
+                    --------------------------------------
+                                    38P
+                                31P     41P
+                            12V
+                    --------------------------------------
+                                    38P
+                                31P     41P
+                            12V
+                                  19V
+                    --------------------------------------
+                                    38P
+                                31P     41P
+                            19V
+                        12V      
+                    --------------------------------------
+                                    38P
+                                19V     41P
+                            12V      31P
+                    --------------------------------------
+                                    38P
+                                19P     41P
+                            12V      31V
+                    --------------------------------------
+                                    38P
+                                19P     41P
+                            12V      31V                            
+                        8V
+                    --------------------------------------
+                                    38P
+                                19V     41P
+                            12P    31P                            
+                        8V
+
+---------------------------------exercicio 2------------------------------
+19,18,16,15,17,2,6
+
+                                    19P
+                                18V
+                            16V
+                            -------------------
+                                    18P
+                                16V     19V
+                            15V
+                            -------------------
+                                    18P
+                                16P     19P
+                            15V         
+                            -------------------
+                                    18P
+                            16P             19P
+                        15V     17V
+                    2V          
+                            -------------------
+                                    18P
+                            16P             19P
+                        15P     17P
+                    2V
+                            -------------------
+                                    18P
+                            16V             19P
+                        15P     17P
+                    2V     
+                        6v
+                            -------------------
+                                    18P
+                            16V             19P
+                        15P     17P
+                    6V     
+                2v        
+                            -------------------
+                                    18P
+                            16V             19P
+                        6P     17P
+                    2V     15V        
+                            
+---------------------------------exercicio 3------------------------------
+8,12,19,31,38,41
+
+                                    8P
+                                        12V
+                                            19V
+                        ---------------------------
+                                    12P
+                                8V        19V
+                        ---------------------------
+                                    12P
+                                8V        19V
+                                                31V
+                        ---------------------------
+                                    12P
+                                8P        19P
+                                                31V
+                        ---------------------------
+                                    12P
+                                8P          31P
+                                        19V      38V
+                        ---------------------------
+                                    12P
+                                8P          31P
+                                        19V      38V
+                                                    41V
+                        ---------------------------
+                                    12P
+                                8P          31V
+                                        19P      38P
+                                                    41V
+                        ---------------------------
+
+18-Revisão
+Argumente a favor ou mostre um contra exemplo:
+A) Toda arvore AVL é rubro negra:: SIM --  Tem suas partes balanceadas então qualquer árvore pode ser a rubro negra.
+B)Toda árvore Rubro-Negra é AVL:: NÃO -- A Árvore Rubro-Negra não é nessariamente balanceada
+C)Toda ABB é Rubro-Negra:: NÃO
+D) Toda Rubro-Negra é uma ABB: SIM
+E)Toda AB é Rubro-Negra:: NÃO
+
+13)O que difere na implementação da função de uma ABB e de uma AVL?
+    Nada...
+12)As afimarções abaixo são verdadeiras ou falsos?
+    I --    Falso 
+    II --   Verdadeiro 
+    III --  Falso
+
+10)Qual a diferença de uma ABB para uma AVL?
+    -a AVL é uma ABB de busca binario ordenada.
+
+8)Descreva a ordem de visita para um percurso em pré-ordem na árvore abaixo.
+
+    -Pré-ordem:: 33,15,41,38,34,47,43,49;
+    ------CODIGO-----
+    void preordem(No *P)
+    {
+        if(p!=NULL)
+        {
+            printf("%d",p->info.chave);
+            preordem(p->esq);
+            preordem(p->dir);
+        }
+    }
+-----------------------------------------------------
+    -in-Ordem:: 15,33,34,38,41,43,47,49;
+
+--------------------------------------------------------
+    -Pos-Ordem:: 15,34,38,43,49,47,41,33  

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1567559966 source:c:\users\murilo\documents\unir\2°semestre\estrutura de dados 1\l4_murilofuzadacunha\ex6_murilo\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
